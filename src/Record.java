@@ -7,7 +7,7 @@ import java.util.*;
  *
  */
 public class Record {
-	String firstName;String lastName;String city;String state;int zipCode;int phoneNo;
+	String firstName;String lastName;String city;String state;int zipCode;long phoneNo;
 	public void setValues(Scanner scanner) {
 		System.out.println("Enter first name - ");
 		firstName=scanner.next();
@@ -20,12 +20,12 @@ public class Record {
 		System.out.println("Enter zipcode - ");
 		zipCode=scanner.nextInt();
 		System.out.println("Enter phone no - ");
-		phoneNo=scanner.nextInt();
+		phoneNo=scanner.nextLong();
 		
 	}
 	@override
 	public String toString() {
-		return "New Record : \n Name - "+firstName+" "+lastName+" City - "+city+" State - "+state+" Zipcode - "+zipCode+" Phone No - "+phoneNo;
+		return firstName+","+lastName+","+city+","+state+","+zipCode+","+phoneNo;
 	}
 	
 }
